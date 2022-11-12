@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"),
+    url("../assets//fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Rubik-Bold";
+  src: local("Rubik-Bold"),
+    url("../assets//fonts/Rubik/static/Rubik-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Rubik-ExtraBold";
+  src: local("Rubik-ExtraBold"),
+    url("../assets//fonts/Rubik/static/Rubik-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+.font-face-rb {
+  font-family: "Rubik";
+}
+
+.font-face-rbb {
+  font-family: "Rubik-Bold";
+}
+
+.font-face-rbxb {
+  font-family: "Rubik-ExtraBold";
+}
