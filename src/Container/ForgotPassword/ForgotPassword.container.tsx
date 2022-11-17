@@ -5,6 +5,7 @@ import AuthLogo from "../../Component/Logo/AuthLogo";
 import MainInput from "../../Component/TextField/Main.textfield";
 import { Formik } from "formik";
 import { ForgotPasswordValidationSchema } from "./ForgotPassword.util";
+import AuthTitle from "../../Component/Text/AuthTitle";
 
 const ForgotPasswordContainer = () => {
   return (
@@ -23,15 +24,12 @@ const ForgotPasswordContainer = () => {
         initialErrors,
         dirty,
       }) => {
-        console.log("touched >>>  ", initialErrors);
         return (
           <div className="flex flex-col items-center justify-center h-screen">
             <AuthLogo />
-            <p className="font-face-rbb text-2xl font-black pt-12">
-              Inventory Management System
-            </p>
+            <AuthTitle text="Inventory Management System" />
             <AuthDivider />
-            <div className="w-12/12 lg:w-custom space-y-4 pt-8">
+            <div className="w-12/12 lg:w-custom space-y-4 pt-12">
               <p className="font-face-rbb text-lg font-black">
                 FORGOT PASSWORD?
               </p>

@@ -6,6 +6,7 @@ import AuthLogo from "../../Component/Logo/AuthLogo";
 import MainInput from "../../Component/TextField/Main.textfield";
 import { Formik } from "formik";
 import { ResetPasswordValidationSchema } from "./ResetPassword.util";
+import AuthTitle from "../../Component/Text/AuthTitle";
 
 const ResetPasswordContainer = () => {
   return (
@@ -28,11 +29,9 @@ const ResetPasswordContainer = () => {
         return (
           <div className="flex flex-col items-center justify-center h-screen">
             <AuthLogo />
-            <p className="font-face-rbb text-2xl font-black pt-12">
-              Inventory Management System
-            </p>
+            <AuthTitle text="Inventory Management System" />
             <AuthDivider />
-            <div className="w-5/12 space-y-4 pt-8">
+            <div className="w-5/12 space-y-4 pt-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
                 <p className="font-face-rbb text-lg font-black">ENTER CODE</p>
                 <p className="font-face-rbb text-lg font-black">NEW PASSWORD</p>

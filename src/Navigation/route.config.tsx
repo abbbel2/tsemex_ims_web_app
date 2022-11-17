@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import ResetPassword from "../Container/ResetPassword/ResetPassword.container";
-import ForgotPasswordPage from "../Pages/ForgotPassword.page";
-import LoginPage from "../Pages/Login.page";
-import ResetPasswordPage from "../Pages/ResetPassword.page";
+import ForgotPasswordPage from "../Pages/Auth/ForgotPassword.page";
+import LoginPage from "../Pages/Auth/Login.page";
+import ResetPasswordPage from "../Pages/Auth/ResetPassword.page";
+import DashboardPage from "../Pages/Main/Dashboard.page";
+import InventoryPage from "../Pages/Main/Inventory.page";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Home</div>,
+    element: <DashboardPage />,
   },
   {
     path: "/login",
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/reset-password",
     element: <ResetPasswordPage />,
+  },
+  {
+    path: "/inventory",
+    element: <InventoryPage />,
   },
 ]);
 

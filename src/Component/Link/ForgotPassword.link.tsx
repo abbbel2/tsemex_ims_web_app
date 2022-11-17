@@ -5,10 +5,10 @@ const ForgotPasswordLink: FC<ForgotPasswordLinkPropType> = ({
   handleClick,
 }) => {
   return (
-    <div className="text-sm">
+    <div className="text-sm font-bold">
       Forgot password?{" "}
       <span
-        className="text-link cursor-pointer underline font-bold"
+        className="text-link cursor-pointer underline font-extrabold"
         onClick={handleClick}
       >
         Reset

@@ -1,4 +1,5 @@
-import AuthButton from "../../Component/Button/AuthButton";
+// import AuthButton from "../../Component/Button/AuthButton";
+import Button from "../../Component/Button/Main.button";
 import AuthDivider from "../../Component/Divider/AuthDivider";
 import ForgotPasswordLink from "../../Component/Link/ForgotPassword.link";
 import AuthLogo from "../../Component/Logo/AuthLogo";
@@ -6,10 +7,11 @@ import MainInput from "../../Component/TextField/Main.textfield";
 import { Formik } from "formik";
 import { LoginValidationSchema } from "./Login.util";
 import { useNavigate } from "react-router-dom";
+import AuthTitle from "../../Component/Text/AuthTitle";
 
 const LoginContainer = () => {
   const navigate = useNavigate();
-  const navigateToReset = () => navigate("/reset");
+  const navigateToReset = () => navigate("/forgot-password");
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
@@ -26,15 +28,12 @@ const LoginContainer = () => {
         initialErrors,
         dirty,
       }) => {
-        console.log("touched >>>  ", initialErrors);
         return (
           <div className="flex flex-col items-center justify-center h-screen">
             <AuthLogo />
-            <p className="font-face-rbb text-2xl font-black pt-12">
-              Inventory Management System
-            </p>
+            <AuthTitle text="Inventory Management System" />
             <AuthDivider />
-            <div className="w-12/12 lg:w-custom space-y-4 pt-8">
+            <div className="w-12/12 lg:w-custom space-y-4 pt-12">
               <p className="font-face-rbb text-lg font-black">SIGN IN</p>
               <MainInput
                 placeholder="Your email ..."
@@ -55,10 +54,10 @@ const LoginContainer = () => {
                 handleChange={handleChange}
               />
             </div>
-            <div className="flex flex-row justify-between items-center pt-8 w-12/12 lg:w-custom">
-              <AuthButton
+            <div className="flex flex-row justify-between items-center pt-12 w-12/12 lg:w-custom">
+              <Button
                 disabled={!dirty || !isValid}
-                onClick={handleSubmit}
+                handleClick={handleSubmit}
                 label="Sign In"
               />
               <ForgotPasswordLink handleClick={navigateToReset} />
